@@ -17,6 +17,10 @@ body {
     color: var(--text-color);
     background-color: white;
     line-height: 1.6;
+
+    /* 🛑 CRITICAL FIX: Forces the body to occupy the full viewport and prevents horizontal scroll issues */
+    width: 100vw; 
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
