@@ -12,15 +12,15 @@
     padding: 0;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Montserrat', sans-serif; /* Clean body text */
     color: var(--text-color);
     background-color: white;
     line-height: 1.6;
-
-    /* 🛑 CRITICAL FIX: Forces the body to occupy the full viewport and prevents horizontal scroll issues */
-    width: 100vw; 
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -565,5 +565,22 @@ footer a:hover {
     .form-footer button {
         letter-spacing: 2px;
         font-size: 0.9em;
+    }
+
+    .villa-title {
+        /* Ensure the title doesn't break the container on small screens */
+        max-width: 100%; 
+        /* Use a smaller letter-spacing than the 5px already set in this media query */
+        letter-spacing: 3px; 
+        /* The font-size here is 2.5em, which is already good */
+    }
+
+    /* Target the service section titles as well, which are also very wide */
+    .services-section .section-title {
+        /* This ensures the 'UNCOMPROMISING VILLA SERVICES' text fits */
+        font-size: 2em; /* Reduced from 3em to 2em */
+        letter-spacing: 5px; /* Reduced from 8px to 5px */
+        /* Forces line breaks */
+        word-break: break-word; 
     }
 }
